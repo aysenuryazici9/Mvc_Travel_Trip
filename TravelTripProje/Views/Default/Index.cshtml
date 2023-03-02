@@ -1,0 +1,96 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:65px">Tatil & Seyahat Blogum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="/Default/Restaurant/" style="color:#a2365a">Restaurantlar</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="/Default/Activity/" style="color:#a2365a">Yapılacaklar</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a href="/Default/Transportation/" style="color:#a2365a">Ulaşım</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider"  style="width:650px;height:365px; " >
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                     <li><img src="@x.BlogImage" alt="" style="width:650px;height:365px;"></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuma Hoşgeldiniz!!</h3>
+                    <p>
+                        Kendinize arada zaman ayırmayı unutmayın. Kişinin kendine en güzel ayıracağı zamanlardan biriside seyahat etmektir. Ne zaman bunalsanız, sıkılsanız seyahat etmeyi asla ihmal etmeyin.
+                        İnsan ruhunun genel zaaflarından biri, değişiklik ihtiyacı duymasıdır. Hep aynı yerde yaşamak, aynı şeyleri görmek yorucu bir ortamda kendi içine, kendi dünyasına kapanıp kalmak insan ruhunda zaman zaman çeşitli bunalımlara sebebiyet veren bir monotonluk oluşturur.Seyahat ederken tüm aktivitelerin tadını çıkarabilir ve her zaman eğlenebilirsiniz.Seyahat deneyiminizin özünü nasıl yakalarsınız? Seyahat biletlerini kaydetmek, kuş tüyü veya çiçek yaprakları toplamak veya sadece otel ve restoranlardan broşür toplamak sizi seyahatinizin zamanında geri götürebilirken, fotoğraflar en yaygın olanlarıdır.Türkiye'de olduğu gibi bir çok farklı ülke de ve şehirde gerçekten inanılmaz keşfedilecek ve öğrenilecek sonsuz şey var.
+                    </p>         
+                </div>
+          @Html.Action("Partial1","Default")
+
+                <div class="grids">
+                    <div class="box1">
+                      @Html.Action("Partial3", "Default")
+
+                      @Html.Action("Partial4", "Default")
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

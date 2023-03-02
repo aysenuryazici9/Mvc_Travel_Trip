@@ -1,0 +1,15 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+
+<div class="box1-left">
+    @foreach (var x in Model)
+    {
+    <div class="bot-img">
+        <img src="@x.BlogImage" alt=""  style="width:150px; height:90px;" />
+    </div>
+    <div class="bot-desc1">
+        <p>@x.Aciklama.Substring(0,90)<a href="/Blog/BlogDetay/@x.ID" style="background-color:#A2365A; color:white; padding:3px; font-size:10px; border-radius:3px;">Devamını Oku</a></p>
+    </div>
+    <div class="clear"></div>
+    }
+</div>
